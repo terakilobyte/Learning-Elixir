@@ -63,7 +63,6 @@ defmodule Learn1 do
 
   iex> Learn1.fact(5)
   120
-
   """
 
   def fact(0) do
@@ -100,7 +99,6 @@ defmodule Learn1 do
 
   iex> Learn1.fib(100)
   354224848179261915075
-
   """
 
   @fibs [1, 1]
@@ -132,7 +130,6 @@ defmodule Learn1 do
   iex>
   Learn1.pow(4, 10)
   1048576
-
   """
 
   def pow(_, 0), do: 1
