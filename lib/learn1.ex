@@ -139,7 +139,11 @@ defmodule Learn1 do
     pow(val, x, n - 1)
   end
 
-  defp pow(val, x, 1), do: val
+  defp pow(val, x, 1) do
+    val
+    |> Integer.to_string
+    |> String.length
+  end
 
   defp pow(val, x, n) do
     pow(val * x, x, n - 1)
