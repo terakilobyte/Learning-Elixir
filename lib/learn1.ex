@@ -38,7 +38,7 @@ defmodule Learn1 do
   30
   """
 
-  def sum(list) do
+  def sum(list) when list do
     sum(list, 0)
   end
 
@@ -120,6 +120,17 @@ defmodule Learn1 do
 
   defp fibs([h|t], n) do
     fibs([h + List.first(t) | [h]], n - 1)
+  end
+
+  @doc"""
+  A better fib generator
+  iex> Learn1.better_fib(3)
+  [0, 1, 1]
+  """
+
+  def better_fib(how_many) do
+    Stream.unfold({0, 1}, fn {fib1, fib2} -> {fib1, {fib2, fib1 + fib2}} end)
+    |> Enum.take(how_many)
   end
 
   @doc"""
