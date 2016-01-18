@@ -29,7 +29,8 @@ defmodule Learn1.Mixfile do
   defp deps do
     [
       {:poison, "~> 1.5"},
-      {:httpoison, "~> 0.8.0"}
+      {:httpoison, "~> 0.8.0"},
+      {:benchfella, "~> 0.3.0"}
     ]
   end
 end
