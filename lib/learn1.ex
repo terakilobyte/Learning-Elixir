@@ -1,5 +1,16 @@
 defmodule Learn1 do
 
+  def process("<" <> str = <<_>> <> ">") do
+    cond do
+      true ->
+        str
+    end
+  end
+
+  def process(_) do
+    {:error, :invalid_argument}
+  end
+
   @doc"""
   Calculates fizzbuzz and returns a list of the results
 
