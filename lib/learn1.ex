@@ -1,15 +1,15 @@
 defmodule Learn1 do
 
-  def process("<" <> str = <<_>> <> ">") do
-    cond do
-      true ->
-        str
-    end
-  end
+  # def process("<" <> str = <<_>> <> ">") do
+  #   cond do
+  #     true ->
+  #       str
+  #   end
+  # end
 
-  def process(_) do
-    {:error, :invalid_argument}
-  end
+  # def process(_) do
+  #   {:error, :invalid_argument}
+  # end
 
   @doc"""
   Calculates fizzbuzz and returns a list of the results
@@ -26,16 +26,23 @@ defmodule Learn1 do
 
   defp fizzbuzz(n, range, list) when range + 1 === n, do: Enum.reverse list
 
-  defp fizzbuzz(n, range, list) do
-    cond do
-      rem(n, 3) + rem(n,5) == 0 -> fzbz = "fizzbuzz"
-      rem(n, 3) == 0 -> fzbz = "fizz"
-      rem(n, 5) == 0 -> fzbz = "buzz"
-      true -> fzbz = Integer.to_string n
-    end
-    fizzbuzz n + 1, range, [fzbz | list]
-  end
+  # defp fizzbuzz(n, range, list) do
+  #   cond do
+  #     rem(n, 3) + rem(n,5) == 0 -> fzbz = "fizzbuzz"
+  #     rem(n, 3) == 0 -> fzbz = "fizz"
+  #     rem(n, 5) == 0 -> fzbz = "buzz"
+  #     true -> fzbz = Integer.to_string n
+  #   end
+  #   fizzbuzz n + 1, range, [fzbz | list]
+  # end
 
+  # defp fizzbuzz(n, range, list) when rem(n, 15) == 0, do: fizzbuzz(n+1, range, ["fizzbuzz" | list])
+
+  # defp fizzbuzz(n, range, list) when rem(n, 5) == 0, do: fizzbuzz(n+1, range, ["buzz" | list])
+
+  # defp fizzbuzz(n, range, list) when rem(n, 3) == 0, do: fizzbuzz(n+1, range, ["fizz" | list])
+
+  # defp fizzbuzz(n, range, list), do: fizzbuzz(n+1, range, [Integer.to_string(n) | list])
 
   @doc"""
   Sums a list
@@ -163,8 +170,6 @@ defmodule Learn1 do
 
   defp pow(val, x, 1) do
     val
-    # |> Integer.to_string
-    # |> String.length
   end
 
   defp pow(val, x, n) do
